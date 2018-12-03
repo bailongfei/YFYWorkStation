@@ -31,8 +31,7 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         FileLockManager fileLockManager = new FileLockManager("lock.lock");
         try {
-            boolean isLock = fileLockManager.Lock();
-            if (isLock){
+            if (fileLockManager.Lock()){
                 launch();
             } else {
                 LogUtil.markLog(2,"程序不允许多开");
