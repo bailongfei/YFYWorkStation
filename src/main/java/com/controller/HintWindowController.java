@@ -18,7 +18,7 @@ public class  HintWindowController {
     @FXML
     private Button noButton;
 
-    public void show(){
+    private void show(){
         window = new Stage();
         window.setTitle("注意");
         FXMLLoader loader = new FXMLLoader();
