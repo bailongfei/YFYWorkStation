@@ -23,9 +23,6 @@ public class FileLockManager {
 
     /**
      * 文件加锁并创建文件
-     *
-     * @return
-     * @throws IOException
      */
     public boolean Lock() throws IOException {
         if (!this.file.exists()) {
