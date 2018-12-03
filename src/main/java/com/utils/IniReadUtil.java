@@ -73,7 +73,7 @@ public class IniReadUtil {
     }
 
     public static Map<String, String> readIniGetDBConfig() {
-        Map<String, String> map = null;
+        Map<String, String> map;
         try {
             File file = new File("wsConfig.ini");
             if (!file.exists() && !file.isDirectory()) {
