@@ -29,7 +29,7 @@ public class IniReadUtil {
             }
             return map;
         } catch (IOException ignore) {
-
+            LogUtil.markLog(2,"读取配置文件失败，详情：[ImageSocket]");
         }
         return map;
     }
@@ -51,7 +51,7 @@ public class IniReadUtil {
             }
             return map;
         } catch (IOException ignore) {
-
+            LogUtil.markLog(2,"读取配置文件失败，详情：[CallSocket]");
         }
         return map;
     }
@@ -67,7 +67,7 @@ public class IniReadUtil {
                 return Integer.parseInt(port);
             }
         } catch (IOException ignore) {
-
+            LogUtil.markLog(2,"读取配置文件失败，详情：[ListenerPort]");
         }
         return null;
     }

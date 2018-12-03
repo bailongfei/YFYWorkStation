@@ -26,8 +26,8 @@ public class LogUtil {
                     file.createNewFile();
                 }
                 logWrite(file,log);
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (IOException ignore) {
+
             }
         }
     }
@@ -35,13 +35,13 @@ public class LogUtil {
     private static void logWrite(File file,Log log){
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
-            writer.write("\n*****************************\r\n");
+            writer.write("*****************************");
             writer.write(log.toString());
             writer.write("\r\n*****************************");
             writer.write("\r\n");
             writer.close();
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch(Exception ignore){
+
         }
     }
 
