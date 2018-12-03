@@ -28,8 +28,8 @@ public class IniReadUtil {
                 map.put("port", port);
             }
             return map;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignore) {
+
         }
         return map;
     }
@@ -50,8 +50,8 @@ public class IniReadUtil {
                 map.put("port", port);
             }
             return map;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignore) {
+
         }
         return map;
     }
@@ -66,8 +66,8 @@ public class IniReadUtil {
                 String port = section.get("port");
                 return Integer.parseInt(port);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignore) {
+
         }
         return null;
     }
@@ -91,8 +91,8 @@ public class IniReadUtil {
                 map.put("password", password);
             }
             return map;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignore) {
+
         }
         return null;
     }
