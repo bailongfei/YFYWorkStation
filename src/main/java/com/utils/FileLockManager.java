@@ -42,19 +42,8 @@ public class FileLockManager {
         }
     }
 
-    public boolean isLock(){
-        if (this.fileLock.isValid()){
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     /**
      * 解锁并删除文件
-     *
-     * @return
-     * @throws IOException
      */
     public boolean unLock() throws IOException {
         if (!this.file.exists()) {
@@ -66,11 +55,7 @@ public class FileLockManager {
             if (this.randomAccessFile != null) {
                 this.randomAccessFile.close();
             }
-            if (this.file.delete()) {
-                return true;
-            } else {
-                return false;
-            }
+            return this.file.delete();
 
         }
 
