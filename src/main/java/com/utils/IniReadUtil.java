@@ -30,7 +30,6 @@ public class IniReadUtil {
             return map;
         } catch (IOException ignore) {
             LogUtil.markLog(2,"读取配置文件失败，详情：[ImageSocket]");
-            System.out.println(1);
         }
         return map;
     }
